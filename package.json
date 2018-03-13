@@ -1,0 +1,14 @@
+{
+  "name": "experimental-blurred-shape",
+  "version": "0.1",
+  "description": "Experiment: create a shape that blurs web page underneath it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcin Konicki",
+  "license": "BSD 3-Clause",
+  "devDependencies": {
+    "eslint": "^4.18.2"
+  }
+}
