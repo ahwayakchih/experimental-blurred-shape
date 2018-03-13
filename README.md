@@ -1,6 +1,6 @@
 # Experiment: Blurred Shape
 
-Use SVG filter to create a shape that blurs web page underneath it, as on this [demo video](https://drive.google.com/file/d/10kp7R9zE-2uMOW6GLywDkfYK3-Ln3Eex/view?usp=sharing).
+Use SVG filter to create a shape that blurs web page underneath it, as on this [demo video](./demo.webm).
 
 Based on the implementation described at:
 
