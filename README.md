@@ -2,6 +2,14 @@
 
 Use SVG filter to create a shape that blurs web page underneath it.
 
+Based on the implementation described at:
+
+https://www.sitepoint.com/design-tricks-with-svg-filters-a-masked-blur-effect/
+
+Uses external SVG image as a shape, because of Firefox's problems with using local SVG fragment:
+
+https://bugzilla.mozilla.org/show_bug.cgi?id=455986
+
 ## Compatibility
 
 It seems to work on latest versions of Chrome and Firefox, but it does not work in IE or Edge:
@@ -22,12 +30,15 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter
 
 But that's completely different implementation.
 
+Too bad SVG's `enable-background` is deprecated, and only IE and Edge implement it anyway (probably that is why they already have `backdrop-filter` done).
+
 ### Canvas
 
 It is possible to re-render parts of web page in a Canvas, using one of:
 
 1. [html2canvas](https://github.com/niklasvh/html2canvas/)
-2. [HTML-GL](https://github.com/PixelsCommander/HTML-GL)
+2. [rasterizeHTML](https://github.com/cburgmer/rasterizeHTML.js)
+3. [HTML-GL](https://github.com/PixelsCommander/HTML-GL)
 
 That allows to apply any effects one can imagine, but has some limitations:
 
