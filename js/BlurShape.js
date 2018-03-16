@@ -31,6 +31,7 @@ function BlurShape (element, options = {}) {
 	this._updatingHTML = null;
 
 	element.style.filter = 'url("#' + this.filterID + '")';
+	element.style.webkitFilter = 'url("#' + this.filterID + '")';
 
 	Object.defineProperty(this, 'x', {
 		get: () => this.options.x,
