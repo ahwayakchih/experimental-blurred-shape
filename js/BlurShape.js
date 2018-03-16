@@ -3,8 +3,13 @@ const DEFAULT_HEIGHT = 300;
 const DEFAULT_X = 0;
 const DEFAULT_Y = 0;
 
+const BLUR_SHAPES = {
+    CIRCLE: 'assets/circle.svg',
+    CIRCLE_SMOOTH: 'assets/circle-smooth.svg'
+}
+
 const DEFAULTS = {
-	url: 'assets/circle.svg',
+	url: BLUR_SHAPES.CIRCLE,
 	w  : DEFAULT_WIDTH,
 	h  : DEFAULT_HEIGHT,
 	x  : DEFAULT_X,
@@ -56,6 +61,15 @@ function BlurShape (element, options = {}) {
 		set: h => {
 			this.options.h = h;
 			this._svg.setAttribute('height', h);
+			this.forceUpdate(element);
+		}
+	});
+
+	Object.defineProperty(this, 'shapeUrl', {
+		get: () => this.options.url,
+		set: shapeUrl => {
+			this.options.url = shapeUrl;
+			this._filter.setAttribute('xlink:href', shapeUrl);
 			this.forceUpdate(element);
 		}
 	});
