@@ -44,3 +44,13 @@ That allows to apply any effects one can imagine, but has some limitations:
 
 1. depending on the way the "drawing HTML on canvas" part is implemented, it may not support all CSS rules and or effects
 2. because of the need to "redraw" initial HTML it is a lot slower, which prevents it form being usable on HTML with CSS animations, or any dynamic changes to the look of the web page
+
+### CSS: `text-shadow`
+
+This cool trick was thought about by [Greg](https://github.com/wlod).
+
+1. Split text characters into `SPAN`s or other type of elements,
+2. use some math to calculate which ones should be "blurred",
+3. apply `text-shadow` on them
+
+This may be made to look almost like real blur effect, but may be too slow to apply dynamically.
