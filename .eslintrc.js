@@ -8,14 +8,12 @@ module.exports = {
 	root: true,
 	parserOptions: {
 		ecmaVersion: 7,
-		sourceType: 'module',
 		ecmaFeatures: {
 			impliedStrict: true,
 			experimentalObjectRestSpread: true
 		}
 	},
 	env: {
-		node: true,
 		es6: true,
 		browser: true
 	},
